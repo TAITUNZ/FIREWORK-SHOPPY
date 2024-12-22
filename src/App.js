@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { auth, db, productsCollection, getDocs, addDoc, deleteDoc, doc, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from './firebase';
 import './App.css'; // นำเข้าไฟล์ CSS ที่ตกแต่ง
-import halloweenImage from './assets/halloween-night.jpg';
+import halloweenImage from './assets/halloweennight.jpg'; // นำเข้าภาพพื้นหลัง
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -90,11 +90,12 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${halloweenImage})` }}>
+      {/* เนื้อหาของแอป */}
       <h1>FIREWORK SHOP - halloween</h1>
       {!user ? (
         <div className="auth-container">
-          <h2></h2>
+          <h2>Welcome</h2>
           <div className="auth-input-container">
             <input
               type="email"
@@ -174,11 +175,6 @@ function App() {
           </ul>
         </div>
       )}
-      <div className="App" style={{ backgroundImage: `url(${halloweenImage})` }}>
-      {/* เนื้อหาของแอป */}
-    </div>
-  );
-
     </div>
   );
 }
