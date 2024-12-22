@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { auth, db, productsCollection, getDocs, addDoc, deleteDoc, doc, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from './firebase';
 import './App.css'; // นำเข้าไฟล์ CSS ที่ตกแต่ง
+import halloweenImage from './assets/halloween-night.jpg';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -173,6 +174,11 @@ function App() {
           </ul>
         </div>
       )}
+      <div className="App" style={{ backgroundImage: `url(${halloweenImage})` }}>
+      {/* เนื้อหาของแอป */}
+    </div>
+  );
+
     </div>
   );
 }
