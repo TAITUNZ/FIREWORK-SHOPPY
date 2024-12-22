@@ -7,7 +7,7 @@ body {
   color: #FFF;
   margin: 0;
   padding: 0;
-  background-image: url('C:\Users\qaqay\OneDrive\Desktop\123\comcom-main/halloween-night.jpg'); /* ใส่ลิงค์ภาพพื้นหลัง */
+  background-image: url('./assets/halloween-night.jpg'); /* ใส่ลิงค์ภาพพื้นหลัง */
   background-size: cover;
   background-position: center;
 }
